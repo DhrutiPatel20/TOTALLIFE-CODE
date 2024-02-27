@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api',
+    'corsheaders',
     'rest_framework',
 ]
 
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'patient_management.urls'
@@ -81,6 +83,19 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Add the origin of your React app
+]
+
+# Optional: Allow credentials (cookies, authentication headers)
+CORS_ALLOW_CREDENTIALS = True
+
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    # ... other hosts ...
+]
 
 
 # Password validation

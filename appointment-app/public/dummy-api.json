@@ -1,0 +1,16 @@
+{
+    "appointments": [
+        {
+            "id": 1,
+            "patientName": "John Doe",
+            "appointmentTime": "10:00:00",
+            "appointmentStatus": "Scheduled"
+        },
+        {
+            "id": 2,
+            "patientName": "Jane Smith",
+            "appointmentTime": "14:30:00",
+            "appointmentStatus": "Completed"
+        }
+    ]
+}
